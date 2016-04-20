@@ -1,0 +1,23 @@
+{
+    "name": "globe/willyfog",
+    "authors": [
+        {
+            "name": "Adrian Gonzalez",
+            "email": "adrigonle@gmail.com",
+            "homepage": "http://www.nodexploit.com",
+            "role": "Developer"
+        }, {
+            "name": "Nicolas Vargas",
+            "email": "nvortega92@gmail.com",
+            "homepage": "http://www.nodexploit.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^2.2",
+        "bshaffer/oauth2-server-php": "^1.8"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "^1.5"
+    }
+}

@@ -1,0 +1,29 @@
+language: php
+dist: trusty
+sudo: required
+php:
+  - '5.6'
+services:
+  - mysql
+cache:
+  directories:
+    - vendor
+    - $HOME/.composer/cache
+    - $HOME/cphalcon
+addons:
+  apt:
+    packages:
+    - mysql-server-5.6
+    - mysql-client-core-5.6
+    - mysql-client-5.6
+before_install:
+  - mv app/config/.env.example app/config/.env
+  - phpenv config-rm xdebug.ini
+  - composer install --prefer-source --no-interaction
+  - vendor/bin/install-phalcon.sh
+before_script:
+  - php app/cli.php migrate
+  - php vendor/bin/codecept build
+script: php vendor/bin/codecept run
+notifications:
+  email: false

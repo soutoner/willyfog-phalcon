@@ -1,0 +1,10 @@
+.idea/
+.vagrant/
+*.log
+.DS_Store
+
+composer.lock
+.env
+vendor/
+tests/_output/
+tests/_support/_generated
